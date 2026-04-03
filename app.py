@@ -254,10 +254,10 @@ def generar_pdf_graficas(alumno_up, alumno_down=None):
 migrar_columnas()  # Asegura que las columnas existan
 
 st.set_page_config(page_title="Sistema TKD", layout="wide")
-st.title("🥋 GESTIÓN DE TORNEO PROFESIONAL")
+st.title("🥋 REGISTRO AL 4TO TORNEO REGIONAL LA PERLA DEL SUR")
 
 MODALIDADES = ["FORMAS", "COMBATE"]
-CINTAS      = ["BLANCA", "AMARILLA", "VERDE", "AZUL", "ROJA", "NEGRA"]
+CINTAS      = ["BLANCA", "NARANJA", "AMARILLA", "VERDE", "AZUL", "ROJA", "NEGRA"]
 
 tab1, tab2 = st.tabs(["📝 REGISTRO", "📋 PANEL DE CONTROL"])
 
