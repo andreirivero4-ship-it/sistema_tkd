@@ -359,6 +359,18 @@ with tab2:
         db.close()
 
         if not df.empty:
+            with st.expander("📥 EXPORTAR DATOS PARA MIGRACIÓN"):
+                col_exp1, col_exp2 = st.columns(2)
+                
+                # Opción 1: CSV (Para Excel o Google Sheets)
+                csv = df.to_csv(index=False).encode('utf-8')
+                col_exp1.download_button(
+                    label="Descargar tabla en CSV",
+                    data=csv,
+                    file_name='respaldo_competidores_tkd.csv',
+                    mime='text/csv',
+                    use_container_width=True
+                )
             # Mostrar tabla sin columnas binarias/id
             cols_ocultar = ('id', 'foto', 'formas', 'combate', 'complexion')
             cols_mostrar = [c for c in df.columns if c not in cols_ocultar]
